@@ -174,6 +174,23 @@ Caption-Bot-for-Assistive-Vision/
 
 ---
 
+## ⚠️ Known Limitations & Future Improvements
+
+The included pre-trained model was trained on **Google Colab's free tier** with limited GPU availability, which constrained both training duration and batch size. As a result, generated captions may sometimes be repetitive, generic, or miss finer details in complex scenes. This is a limitation of the training compute, not the architecture itself.
+
+**Potential improvements with better hardware / more time:**
+
+| Area | Current | Potential Upgrade |
+| :--- | :--- | :--- |
+| **Training Data** | Flickr8k (8,000 images) | Flickr30k or MS COCO (330k images) |
+| **Encoder** | ResNet50 | Vision Transformer (ViT) or EfficientNet-B7 |
+| **Embeddings** | GloVe 50d (frozen) | GloVe 300d or trainable embeddings |
+| **Decoding Strategy** | Greedy (argmax) | Beam Search (k = 3–5) |
+| **Evaluation** | Manual inspection | BLEU-4, METEOR, CIDEr scoring |
+| **Training Epochs** | 30 (small batch) | 50+ with larger batches and learning rate scheduling |
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to improve model performance, add Beam Search, or extend multilingual speech support:
