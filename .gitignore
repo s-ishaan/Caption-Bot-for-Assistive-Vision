@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Data & Large Files
+Flickr_TextData/
+Images/
+*.jpg
+*.jpeg
+*.png
+*.txt
+!requirements.txt
+!README.md
+glove.*
+*.pkl
+!vocab.pkl
+*.weights.h5
+*.keras
+!full_model.keras
+saved_models/
+descriptions.txt
+
+# Jupyter & IDEs
+.ipynb_checkpoints
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Audio / Temp outputs
+*.mp3
+
